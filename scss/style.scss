@@ -371,6 +371,10 @@ a:hover, a:focus {
 		width: 100%;
 	}
 }
+.map-iframe {
+ 	width: 100%;
+	height: 300px;
+}
 .send-us {
 	@include font(2.9rem, 700, 1.2);
 	margin-top: 75px;
