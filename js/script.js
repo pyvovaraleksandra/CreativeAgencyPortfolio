@@ -3,9 +3,25 @@ $('[data-spy="scroll"]').on('activate.bs.scrollspy', function (event) {
 
 	if (section != "Home" ) {
 		document.getElementById("main-header").style.display = "none";
-		document.getElementById("additional-header").style.display = "block";
+		$("#additional-header").addClass('additional-header-visible');
 	} else {
 		document.getElementById("main-header").style.display = "block";
-		document.getElementById("additional-header").style.display = "none";
+		$("#additional-header").removeClass('additional-header-visible');
 	}
 })
+
+// slow scroll
+$(document).ready(function(){
+	$("#navMenu").on("click","a", function (event) {
+	    event.preventDefault();
+	    var id  = $(this).attr('href'),
+	        top = $(id).offset().top;
+	    $('body,html').animate({scrollTop: top}, 1500);
+	});
+	$("#first-navMenu").on("click","a", function (event) {
+	    event.preventDefault();
+	    var id  = $(this).attr('href'),
+	        top = $(id).offset().top;
+	    $('body,html').animate({scrollTop: top}, 1500);
+	});
+});

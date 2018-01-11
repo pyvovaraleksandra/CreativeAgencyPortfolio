@@ -113,8 +113,10 @@ a:hover, a:focus {
 	text-transform: uppercase;
 }
 #additional-header {
-	display: none;
-	position: fixed;
+	transition: 0.3s;
+	position: absolute;
+	visibility:hidden;
+	opacity:0;
 	left: 0;
 	right: 0;
 	z-index: 999;
@@ -122,9 +124,14 @@ a:hover, a:focus {
 	.menu-item {
 		display: inline-block;
 	}
-	.menu-item-a:hover {
+	.menu-item-a:hover, .menu-item-a:focus {
 		background-color: transparent;
 	}
+}
+#additional-header.additional-header-visible {
+	position: fixed;
+	visibility: visible;
+	opacity: 1;
 }
 #navMenu .menu-item-a {
   display: inline-block;
