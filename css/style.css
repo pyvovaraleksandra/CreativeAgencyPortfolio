@@ -122,6 +122,22 @@ a:hover, a:focus {
   line-height: 1.2;
   color: #fff;
   text-transform: uppercase; }
+#additional-header {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background-color: #1e0404; }
+#additional-header .menu-item {
+    display: inline-block; }
+#additional-header .menu-item-a:hover {
+  background-color: transparent; }
+#navMenu .menu-item-a {
+  display: inline-block;
+  padding: 0; }
+.menu-item.active .menu-item-a {
+  color: #eeb501; }
 
 #main {
   padding-top: 100px;
@@ -616,3 +632,6 @@ a:hover, a:focus {
   .touch__socials-social {
     width: 50px;
     height: 50px; } }
+
+
+
