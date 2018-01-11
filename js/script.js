@@ -12,16 +12,18 @@ $('[data-spy="scroll"]').on('activate.bs.scrollspy', function (event) {
 
 // slow scroll
 $(document).ready(function(){
+	var offset = 100;
 	$("#navMenu").on("click","a", function (event) {
 	    event.preventDefault();
 	    var id  = $(this).attr('href'),
-	        top = $(id).offset().top;
+	        top = $(id).offset().top - offset;
 	    $('body,html').animate({scrollTop: top}, 1500);
 	});
 	$("#first-navMenu").on("click","a", function (event) {
 	    event.preventDefault();
 	    var id  = $(this).attr('href'),
-	        top = $(id).offset().top;
+	        top = $(id).offset().top - offset;
 	    $('body,html').animate({scrollTop: top}, 1500);
 	});
 });
+
