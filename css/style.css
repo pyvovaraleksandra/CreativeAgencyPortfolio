@@ -14,7 +14,6 @@
   src: url("fonts/OneStrokeScript.ttf"); }
 
 html {
-  font-family: "Open Sans";
   font-size: 10px; }
 
 * {
@@ -595,23 +594,24 @@ a:hover, a:focus {
   .services-column {
     padding-top: 0; }
   .service {
-    padding: 0 100px;
     margin-bottom: 70px; }
   .service-desc {
     font-size: 1.8rem; }
-  .team__member:nth-child(2n+3) {
-    clear: left; }
-  .member-photo-img {
-    width: 85%; }
   .client-text::before {
     top: -28px;
     left: -72px; }
   .client-text::after {
     top: 70px;
-    right: -50px; }
+    right: -50px; } }
+
+@media (max-width: 767px) {
+  .team__member:nth-child(2n+3) {
+    clear: left; }
+  .member-photo-img {
+    width: 85%; }
   .clients-row-1 {
     border-bottom: none; }
-  .clients-col:nth-child(2n+2) {
+  .clients-col:nth-child(1n+2) {
     border-right: none; }
   .clients-xs-col {
     border-bottom: 1px solid #a3a3a3; }
@@ -644,4 +644,6 @@ a:hover, a:focus {
     margin-bottom: 70px; }
   .touch__socials-social {
     width: 50px;
-    height: 50px; } }
+    height: 50px; }
+  .client-text::after {
+    top: 120px; } }
